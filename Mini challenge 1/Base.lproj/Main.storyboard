@@ -27,7 +27,6 @@
                                 <items>
                                     <tabBarItem title="Overview" image="chart.pie.fill" catalog="system" id="fkV-5b-GG1"/>
                                     <tabBarItem title="Report" image="chart.bar.fill" catalog="system" id="xfn-mr-kyz"/>
-                                    <tabBarItem title="Settings" image="gear" catalog="system" id="kAp-i6-dZX"/>
                                 </items>
                             </tabBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OPc-0A-mOM">
@@ -219,7 +218,6 @@
         <image name="chart.bar.fill" catalog="system" width="64" height="44"/>
         <image name="chart.pie.fill" catalog="system" width="64" height="62"/>
         <image name="exported white rectangle " width="360" height="410"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="small green white oval " width="189" height="188"/>
     </resources>
 </document>

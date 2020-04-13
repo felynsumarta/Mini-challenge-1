@@ -18,16 +18,19 @@ class SecondViewController: UIViewController {
     let sleeps = [Reminder(reminderName: "Sleep")]
     let hobbies = [Reminder(reminderName: "Hobby")]
     let households = [Reminder(reminderName: "Household")]
-
+    let entertains = [Reminder(reminderName: "Entertain")]
+    let exercises = [Reminder(reminderName: "Exercise")]
+    let hangouts = [Reminder(reminderName: "Hangout")]
+    let meditates = [Reminder(reminderName: "Meditate")]
+    let selfdevelopments = [Reminder(reminderName: "Self-Development")]
+    let familytimes = [Reminder(reminderName: "Family Time")]
     
-   
+    
     
     @IBOutlet weak var textLabel: UILabel!
     
-    
-    
-    
     @IBOutlet weak var totalTime: UILabel!
+
     
     @IBOutlet weak var timeInTextField: UITextField!
     @IBOutlet weak var timeOutTextField: UITextField!
@@ -41,10 +44,11 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let labels = usedReminders
-//        textLabel.text = "\(labels.reminderName)"
+        let labels = usedReminders [0]
+        textLabel.text = "\(labels.reminderName)"
+    
         
-        
+
         timeInTextField.borderStyle = .none
         timeOutTextField.borderStyle = .none
         
@@ -77,7 +81,7 @@ class SecondViewController: UIViewController {
     
     func fetchReminder (category: CategoryItem){
     
-        if category.categoryImage == "work"{
+        if category.categoryImage == "Work"{
             usedReminders = works
         }else
         if category.categoryImage == "Sleep"{
@@ -88,14 +92,34 @@ class SecondViewController: UIViewController {
         }else
         if category.categoryImage == "Household"{
             usedReminders = households
+        }else
+        if category.categoryImage == "Entertain"{
+        usedReminders = entertains
+        }else
+        if category.categoryImage == "Exercise"{
+        usedReminders = exercises
+        }else
+        if category.categoryImage == "Hangout"{
+        usedReminders = hangouts
+        }else
+        if category.categoryImage == "Meditate"{
+        usedReminders = meditates
+        }else
+        if category.categoryImage == "Self-Development"{
+        usedReminders = selfdevelopments
+        }else
+        if category.categoryImage == "Family time"{
+        usedReminders = familytimes
         }
     }
-    
     
     @objc func viewTapped (gestureRecognizer: UITapGestureRecognizer){
     view.endEditing(true)
         
     }
+    
+    
+        
     
     @objc func dateChanged (timeInDatePicker: UIDatePicker){
     

@@ -23,10 +23,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func fetchData(){
-           categoryItems.append(CategoryItem(categoryImage: "work"))
-           categoryItems.append(CategoryItem(categoryImage: "Exercise"))
-           categoryItems.append(CategoryItem(categoryImage: "Entertain"))
-           categoryItems.append(CategoryItem(categoryImage: "Hangout"))
+           categoryItems.append(CategoryItem(categoryImage: "Work"))
+           categoryItems.append(CategoryItem(categoryImage: "Sleep"))
+           categoryItems.append(CategoryItem(categoryImage: "Hobby"))
+           categoryItems.append(CategoryItem(categoryImage: "Household"))
+           categoryItems.append(CategoryItem(categoryImage: "Meditate"))
            categoryItems.append(CategoryItem(categoryImage: "Add new activity"))
 
        }
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else{
             let secondVC = storyboard?.instantiateViewController(identifier: "SecondViewController")as? SecondViewController
                 secondVC?.vc = self
+            secondVC?.fetchReminder(category: categoryItems[indexPath.row])
                 present(secondVC!, animated: true)
             }
             
@@ -65,10 +67,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
         
    
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-            let destinationVC = segue.destination as? SecondViewController
-            destinationVC?.fetchReminder(category: sender as! CategoryItem )
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//            let destinationVC = segue.destination as? SecondViewController
+//            destinationVC?.fetchReminder(category: sender as! CategoryItem )
 
       
         
@@ -85,4 +87,4 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 
 
-}
+
