@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Mediate.png",
+      "filename" : "Meditate.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Mediate@2x.png",
+      "filename" : "Meditate@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Mediate@3x.png",
+      "filename" : "Meditate@3x.png",
       "scale" : "3x"
     }
   ],
