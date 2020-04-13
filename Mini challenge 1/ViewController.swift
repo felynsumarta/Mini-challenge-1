@@ -53,30 +53,36 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let addVC = storyboard?.instantiateViewController(identifier: "ThirdViewController")as? ThirdViewController
             addVC?.vc = self
             present(addVC!, animated: true)
+            
         }else{
-                let secondVC = storyboard?.instantiateViewController(identifier: "SecondViewController")as? SecondViewController
+            let secondVC = storyboard?.instantiateViewController(identifier: "SecondViewController")as? SecondViewController
                 secondVC?.vc = self
                 present(secondVC!, animated: true)
             }
-            let selectedCategoryItem = categoryItems[indexPath.row]
             
+        
+        
     }
         
-            
+   
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            let destinationVC = segue.destination as? SecondViewController
+            destinationVC?.fetchReminder(category: sender as! CategoryItem )
+
+      
         
-            
-            //let selectedCategoryItem = categoryItems[indexPath.row]
-        
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-       // let destinationVC = segue.destination as? SecondViewController
+       
 
 }
 
+
+
+
+
+
+
 }
-
-
-
